@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>a02 git merge</title>
+    <style type="text/css">
+      SPAN {
+        font-family: 'Lucida Console', monospace;
+      }
+      SPAN.cmd {
+        background-color: #ffcccc;
+      }
+      SPAN.branch {
+        background-color: #ccffcc;
+      }
+      SPAN.submit {
+        background-color: #ccccff;
+      }
+      SPAN.change {
+        background-color: #ffff99;
+      }
+    </style>
+  </head>
+  <body>
+    ​
+    <svg width="500" height="310">
+      <polygon
+        points="100,10 40,198 190,78 10,78 160,198"
+        fill="lime"
+        stroke="purple"
+        stroke-width="5"
+        fill-rule="evenodd"
+      />
+      <circle cx="250" cy="100" r="45" stroke="green" stroke-width="4" fill="yellow" />
+      <rect
+        x="310"
+        y="10"
+        rx="20"
+        ry="20"
+        width="180"
+        height="180"
+        fill="red"
+        stroke="black"
+        stroke-width="5"
+      />
+      <rect y="200" width="500" height="100" fill="blue" stroke="black" stroke-width="5" />
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color: rgb(255, 255, 0); stop-opacity: 1" />
+          <stop offset="100%" style="stop-color: rgb(255, 0, 0); stop-opacity: 1" />
+        </linearGradient>
+      </defs>
+      <ellipse cx="250" cy="250" rx="84" ry="48" fill="url(#grad1)" />
+      <text
+        fill="#ffffff"
+        font-size="48"
+        font-family="Monospace"
+        x="250"
+        y="250"
+        dominant-baseline="middle"
+        text-anchor="middle"
+      >
+        SVG
+      </text>
+      Sorry, your browser does not support inline SVG.
+    </svg>
+    ​
+    <h2>Instructions</h2>
+    <ul>
+      <li>Create a new repository (see: <span class="cmd">man git-init</span>)</li>
+      <li>Add & commit this file to that repo</li>
+      <li>Create a new feature branch named <span class="branch">feat-color</span></li>
+      <li>Create another new feature branch named <span class="branch">feat-position</span></li>
+      <li>
+        switch to the <span class="branch">feat-color</span> branch and
+        <span class="change">change the color of the circle to blue</span>
+      </li>
+      <li>
+        merge the <span class="branch">feat-color</span> branch into
+        <span class="branch">master</span> with with a merge commit (it cannot be a fast-forward
+        merge)
+      </li>
+      <li>
+        switch to the <span class="branch">feat-position</span> branch and
+        <span class="change">move the circle down 50 pixels</span>
+      </li>
+      <li>
+        merge the <span class="branch">feat-position</span> branch into
+        <span class="branch">master</span> with a merge commit
+      </li>
+      <li>both sets of changes should be reflected in <span class="branch">master</span></li>
+      <li>delete both feature branches</li>
+      <li>
+        create a log file of the commits with the command
+        <span class="cmd">log --oneline --graph --decorate --all > a02.log.txt</span>
+      </li>
+      <li>
+        submit both <span class="submit">index.html</span> and
+        <span class="submit">a02.log.txt</span> in a zip file named
+        <span class="submit">git01.zip</span>
+      </li>
+    </ul>
+    ​
+  </body>
+</html>
